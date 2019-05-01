@@ -15,12 +15,9 @@ fn index() -> Template {
     let mut context = HashMap::new();
     let dt = Local::now();
     let force_bustin = env::var("FORCE_BUSTIN").unwrap_or("0".to_string()) == "1";
+    let bustin_time = force_bustin || dt.weekday() == Weekday::Thu;
 
-    if force_bustin || dt.weekday() == Weekday::Thu {
-        context.insert("bustin", true);
-    } else {
-        context.insert("bustin", false);
-    }
+    context.insert("bustin", bustin_time);
     context.insert("forced", force_bustin);
 
     Template::render("index", &context)
