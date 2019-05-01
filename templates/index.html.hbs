@@ -1,0 +1,48 @@
+<!doctype html>
+  <html class="no-js" lang="">
+
+  <head>
+    <title>Bustin Solutions. Proud to be bustin since 2015</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+    <style>
+      html {
+        background-color: #000000;
+      }
+
+      .announce {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+      }
+
+      .announce h1 {
+        color: #ffffff;
+        margin-top: -250px;
+        margin-bottom: 50px;
+        font-size: 350%;
+        font-family: 'Press Start 2P', cursive;
+      }
+    </style>
+  </head>
+
+  <body>
+    {{#if thursday}}
+    <div class="announce">
+      <h1>Happy Thursday</h1>
+
+      <iframe width="640"
+        height="360"
+        src="https://www.youtube.com/embed/0tdyU_gW6WE?autoplay=1&cc_load_policy=1"
+        frameborder="0"></iframe>
+    </div>
+    {{else}}
+    <div class="announce">
+      <h1>Bustin has concluded.<br>Come back later.</h1>
+    </div>
+    {{/if}}
+  </body>
+</html>
