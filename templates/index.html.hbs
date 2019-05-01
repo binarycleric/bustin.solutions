@@ -19,25 +19,40 @@
         min-height: 100vh;
       }
 
-      .announce h1 {
+      .announce {
         color: #ffffff;
-        margin-top: -250px;
-        margin-bottom: 50px;
-        font-size: 350%;
         font-family: 'Press Start 2P', cursive;
+        margin-top: -100px;
+        margin-bottom: 50px;
+        padding-top: 25px;
+      }
+
+      .announce h1 {
+        font-size: 350%;
+      }
+
+      .announce h2 {
+        font-size: 125%;
+      }
+
+      a:link, a:visited {
+        padding-top: 50px;
+        text-decoration: none;
+        color: #ffffff;
       }
     </style>
   </head>
 
   <body>
-    {{#if thursday}}
+    {{#if bustin}}
     <div class="announce">
-      <h1>Happy Thursday</h1>
+      <h1>Happy Bustin Thursday</h1>
+      {{#if forced}}
+        <h2>but not really. this is only a demo.</h2>
+      {{/if}}
 
-      <iframe width="640"
-        height="360"
-        src="https://www.youtube.com/embed/0tdyU_gW6WE?autoplay=1&cc_load_policy=1"
-        frameborder="0"></iframe>
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/0tdyU_gW6WE?autoplay=1&cc_load_policy=1" frameborder="0"></iframe>
+      <a class="credit" href="https://www.youtube.com/user/NeilCicierega">Credit to NeilCicierega</a>
     </div>
     {{else}}
     <div class="announce">
